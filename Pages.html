@@ -1,0 +1,131 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timo Matis Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="card.css">
+
+    <style>
+        .card {
+            width: 300px;
+            height: fit-content;
+        }
+
+        .card p{
+            text-align: center;
+        }
+
+        article {
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .card li{
+          font-size: xx-large;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        .card ul{
+          font-size: xx-large;
+        }
+        .card h1{
+          font-size: 40px;
+          text-align: center;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+        <header> 
+            <h1>Web Design Techniques</h1> <br>
+            <h4>Timo Matis Student of Computer Information & Technology</h4>
+        
+        </header>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a class="active" href="Pages.html">Techniques</a>
+            <a href="info.html">Info</a>
+            <a href="Contact.html">Contact</a>
+            <a href="library.html">Library</a>
+        </nav>
+
+        <aside>
+            
+
+
+        </aside>
+
+        <article>
+
+            <div class="card">
+              <div class="spacer">
+                <h1>Development Platforms</h1>
+                <br>
+                <ul>
+                  <li>HTML</li><br>
+                  <img src="Timo's Work/HTML.png" alt="HTML" style="width: 50px; height: auto;"><br>
+                  <li>CSS</li><br>
+                  <img src="Timo's Work/CSS.png" alt="CSS" style="width: 50px; height: auto;"><br>
+                  <li>Python</li><br>
+                  <img src="Timo's Work/PY.png" alt="Python" style="width: 50px; height: auto;"><br>
+                  <li>Java Script</li><br>
+                  <img src="Timo's Work/JS.png" alt="Java Script" style="width: 50px; height: auto;"><br>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card">
+
+              <div class="spacer">
+
+                <h1>Styles</h1>
+                <br>
+                <ul>
+                  <li>Grid</li><br>
+                  <img src="Timo's Work/Grid.png" alt="Grid" style="width: 100px; height: auto;"><br>
+                  <li>Holy Grail Layout</li><br>
+                  <img src="Timo's Work/HolyGrail.png" alt="HolyGrail" style="width: 100px; height: auto;"><br>
+                  <li>Flex Box</li><br>
+                  <img src="Timo's Work/Flexbox.png" alt="Flexbox" style="width: 100px; height: auto;"><br>
+                  <li>Animations</li><br>
+                  <div class="bounce"></div><br>
+                </ul>
+                
+              </div>
+
+            </div>
+
+
+        </article>
+    </div>
+</body>
+
+  <footer>
+    <h4>
+      Copyright Timo Matis, Spring 2023
+    </h4>
+  </footer>
+
+  <script>
+    window.onscroll = function() {stickys()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function stickys() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+</html>

@@ -1,0 +1,121 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timo Matis Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="card.css">
+
+    <style>
+        .card {
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+        }
+        .card p {
+            font-size: large;
+        }
+        .card h3 {
+            font-size: x-large;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+        <header> 
+            <h1>Contact Me</h1> <br>
+            <h4>Timo Matis Student of Computer Information & Technology</h4>
+        
+        </header>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="Pages.html">Techniques</a>
+            <a href="info.html">Info</a>
+            <a class="active" href="Contact.html">Contact</a>
+            <a href="library.html">Library</a>
+        </nav>
+
+        <aside>
+            
+
+
+        </aside>
+
+        <article>
+
+            <div class="card">
+
+                <div class="contact zoom">
+                    <img src="Timo's Work/Phone.png">
+                </div>
+                <h3>
+                    My Phone Number<br>
+                </h3>
+                <p>
+                    ###-###-#### <br>
+                </p>
+            </div>
+
+            <div class="card">
+
+                <div class="contact zoom">
+                    <img src="Timo's Work/Gmail.png">
+                </div>
+                <h3>
+                    My Email<br>
+                </h3>
+                <p>
+                    Tmatis@iu.edu <br>
+                </p>
+            </div>
+
+            <div class="card">
+
+                <div class="contact zoom">
+                    <img src="Timo's Work/Linkedin.png">
+                </div>
+                <h3>
+                    My Linkedinl<br>
+                </h3>
+                <p>
+                    Timo Matis <br>
+                    <a href="https://www.linkedin.com/in/timo-matis-2981b6251/" target="_blank">Click for Profile</a>
+                </p>
+            </div>
+
+            
+
+
+        </article>
+    </div>
+</body>
+
+  <footer>
+    <h4>
+      Copyright Timo Matis, Spring 2023
+    </h4>
+  </footer>
+
+  <script>
+    window.onscroll = function() {stickys()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function stickys() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+</html>

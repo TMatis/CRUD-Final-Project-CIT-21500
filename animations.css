@@ -1,0 +1,21 @@
+
+.bounce {
+    width: 100px;
+    height: 100px;
+    background-image:url(WorldNews.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation-name: bouncey;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+
+  @keyframes bouncey {
+0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+40% {transform: translateY(-20px);} 
+60% {transform: translateY(-15px);} 
+60% {transform: translateY(-10px);} 
+80% {transform: translateY(-5px);} 
+}

@@ -1,0 +1,200 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timo Matis Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="card.css">
+    <!-- include the jQuery source -->
+    <script src="./lib/jquery-3.7.1.js"></script>
+    <!-- include the file with the data -->
+    <script src="Library_Array.js"></script>
+    <!-- Include the file with the code -->
+    <script src="Library_Code.js"></script>
+
+    <style>
+        .card {
+            width: 300px;
+            min-height: 300px;
+            height: fit-content;
+        }
+
+        .card p{
+            text-align: center;
+        }
+
+        #Add_Series {
+            grid-column: 1 / 2;
+            grid-row: 4 / -1;
+            background-color: #608BA6;
+            background-color: lightskyblue;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+            margin: 10px;
+            border-radius: 10px;
+            justify-content: space-between;
+            box-shadow: 0 4px;
+        }
+
+        #series_container {
+            grid-column: 2 / -1;
+            grid-row: 4 / -1;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .container{
+            grid-template-columns: repeat(2fr 6fr);
+            gap: 10px;
+
+            overflow-y: auto; /* Adds vertical scrolling if content overflows */
+            max-height: 100vh;  /*Limits the height to the viewport */
+        }
+        .SeriesBox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            flex-direction: column; /* Arrange items in a column */
+            align-items: center;    /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            text-align: center;     /* Center text inside the box */    
+            position: relative;
+            min-height: 300px;
+            height: fit-content;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <header> 
+                <h1>Timo's Personal Library</h1> <br>
+                <h4>Timo Matis Student of Computer Information & Technology</h4>
+        
+            </header>
+
+            <nav id="navbar">
+                <a href="index.html">Home</a>
+                <a href="Pages.html">Techniques</a>
+                <a href="info.html">Info</a>
+                <a href="Contact.html">Contact</a>
+                <a class="active" href="library.html">Library</a>
+            </nav>
+
+
+            
+            <div id="Add_Series">
+                <div id="StatusBar" class="card" style="height: fit-content; min-height: 100px;">
+                    <h2>Status:</h2>
+                    <p id="Status_Info"></p>
+                </div>
+
+                <div class="Series_Input">
+
+                    <form id="Add_Series">
+                        <h1>New Series</h1><br>
+
+                        <label for="seriesName">Series Name:</label>
+                        <input type="text" id="seriesName" name="seriesName"><br><br>
+                        
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description"></textarea><br><br>
+                        
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author"><br><br>
+                        
+                        <label for="books">Books (comma separated):</label>
+                        <input type="text" id="books" name="books"><br><br>
+
+                        <h4>Storage Location:</h4>
+                        <label for="room">Room:</label>
+                        <input type="text" id="room" name="room"><br><br>
+
+                        <label for="bookCase">Book Case:</label>
+                        <input type="text" id="bookCase" name="bookCase"><br><br>
+
+                        <label for="shelf">Shelf:</label>
+                        <input type="number" id="shelf" name="shelf"><br><br>
+                
+                        <input type="button" value="Add Series" onclick="Add_New_Series()" style="position: relative;">
+                    </form>
+                </div>
+
+                <div class="access card">
+                    <h3>Enter your account details</h3>
+                    <label for="id_Name"> Name </label><br /><input
+                    type="text"
+                    id="id_Name"
+                    name="id_Name"
+                    value=""
+                    maxlength="25"
+                    size="20"
+                    /><br />
+                    <label for="id_Passcode"> Pass code </label><br /><input
+                    type="text"
+                    id="id_Passcode"
+                    name="id_Passcode"
+                    value=""
+                    maxlength="25"
+                    size="20"
+                    /><br />
+                    <button id="login">Access Your Account</button>
+            
+                </div>
+
+                <div id="Info" style="display: none;">
+
+                </div>
+
+                <div id="Update_Content" style="display: none;">
+
+                </div>
+
+            </div>
+
+
+            <div id="series_container">
+
+            </div>
+            
+        </div>
+    </body>
+
+    <button id="secret">
+        <footer>
+            <h4>
+                Copyright Timo Matis, Spring 2023
+            </h4>
+        </footer>
+    </button>
+
+    <footer id="backup_footer">
+        <h4>
+            Copyright Timo Matis, Spring 2023
+        </h4>
+    </footer>
+
+
+    <script>
+        window.onscroll = function() {stickys()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function stickys() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</html>

@@ -1,0 +1,143 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timo Matis Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="card.css">
+
+    <style>
+
+        article {
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+        }
+        .card li{
+          font-size: xx-large;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        .card ul{
+          font-size: medium;
+          padding-left: 40px;
+        }
+        .card h1{
+          font-size: 40px;
+          text-align: center;
+        }
+        .card p {
+            font-size: x-large
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+        <header> 
+            <h1>About Me</h1> <br>
+            <h4>Timo Matis Student of Computer Information & Technology</h4>
+        
+        </header>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="Pages.html">Techniques</a>
+            <a class="active" href="info.html">Info</a>
+            <a href="Contact.html">Contact</a>
+            <a href="library.html">Library</a>
+        </nav>
+
+        <aside>
+            
+
+
+        </aside>
+
+        <article>
+
+            <div class="card" style="height: 500px; width: 1000px;">
+              <div class="spacer">
+                <h1>About Me</h1>
+                <br>
+                <p>
+                    I started my first coding in my freshman year in High School. I made a "Rock Paper Scisors" Game i called "Kiwi, Kiwi, Ninja Kiwi" (the name is becase i used 
+                    said items as the images) it had a simple scoreboard and when you clicked one of the three images it pulled a random number as your score and applyed the number to 
+                    your score.
+                    <br>
+                    <br>
+                    I started scouting when i was eight in cub scouts, I worked on my rank till 11 and earned my Weblows rank and my Arrow of Light Award. After which I went
+                    into Boy Scouts of America (BSA). There I achieved many things, including the youngest of our troop to achieve Eagle Scout (I was 15). 
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="height: fit-content; width: 400px;">
+
+              <div class="spacer">
+
+                <h1>Achivements</h1>
+                <br>
+                <ul>
+                  <li>Eagle Scout<br>
+                    (BSA Rank)<br>
+                    <img src="Timo's Work/EagleRank.png" alt="EagleRank" style="width: 50px; height: auto;">
+                    </li>
+                  <li>On My Honor<br>
+                    (Youth Religous Award)<br>
+                    <img src="Timo's Work/OnMyHonnor.png" alt="OnMyHonnor" style="width: 50px; height: auto;">
+                    </li>
+                  <li>Arrow of Light<br>
+                    (BSA Religous Award)<br>
+                    <img src="Timo's Work/ArrowofLight.png" alt="ArrowofLight" style="width: 50px; height: auto;">
+                    </li>
+                  <li>Graduated Seminary<br>
+                    (LDS religion class for kids 14-18)<br>
+                    <img src="Timo's Work/SeminaryGrad.jpg" alt="Award" style="width: 50px; height: auto;">
+                    </li>
+                  <li>Graduated High School with Academic Honors and with a 4.0<br>
+                    <img src="Timo's Work/HSGrad.jpg" alt="Award" style="width: 50px; height: auto;">
+                    </li>
+                </ul>
+                
+              </div>
+
+            </div>
+
+
+        </article>
+    </div>
+</body>
+
+  <footer>
+    <h4>
+      Copyright Timo Matis, Spring 2023
+    </h4>
+  </footer>
+
+  <script>
+    window.onscroll = function() {stickys()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function stickys() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+</html>
