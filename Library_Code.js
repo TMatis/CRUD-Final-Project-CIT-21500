@@ -243,7 +243,7 @@ const updateHandler = (index) => {
     // Get the series that needs to be updated
     let series = Library[index];
 
-    // Manually generate the books string without using .map()
+    //make books a string
     let booksString = "";
     for (let i = 0; i < series.Books_Owned.length; i++) {
         booksString += series.Books_Owned[i].Title;
